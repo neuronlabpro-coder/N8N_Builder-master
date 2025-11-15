@@ -12,8 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar todo el proyecto
 COPY . .
 
-# Puerto por defecto del config.yaml
-ENV STANDARD_API_PORT=8002
+EXPOSE 8002
 
 # Comando de arranque
 CMD ["python", "run.py"]
