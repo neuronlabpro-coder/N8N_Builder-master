@@ -175,7 +175,7 @@ async def main():
         # Start the FastAPI server
         config = uvicorn.Config(
             "n8n_builder.app:app",
-            host="127.0.0.1",
+            host="0.0.0.0",
             port=port,
             log_level="info",
             reload=False  # Disable reload to avoid port conflicts
