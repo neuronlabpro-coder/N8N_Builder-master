@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  builder:
+    container_name: n8n_builder
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      STANDARD_API_PORT: 8002
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
